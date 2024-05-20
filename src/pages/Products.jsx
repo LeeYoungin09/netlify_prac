@@ -32,13 +32,15 @@ const Products = () => {
 
   // id가 일치하는 하나의 상품
   const getProductList = async () => {
-    let url = `http://localhost:5000/products/${id}`;
+    let url = `https://my-json-server.typicode.com/LeeYoungin09
+    /netlify_prac/products/${id}`;
     let response = await fetch(url);
     let data = await response.json();
     setProducts(data);
     // console.log("상품정보---", products);
 
-    let url2 = `http://localhost:5000/products?category=${data.category}`;
+    let url2 = `https://my-json-server.typicode.com/LeeYoungin09
+    /netlify_prac/products/?category=${data.category}`;
     let response2 = await fetch(url2);
     let data2 = await response2.json();
     setsimilarList(data2); //카테고리가 똑같은 상품리스트
