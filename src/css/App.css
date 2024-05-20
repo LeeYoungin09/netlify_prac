@@ -1,0 +1,120 @@
+.App {
+  overflow: hidden;
+}
+
+.mw {
+  max-width: 1200px;
+  width: calc(100% - 2rem);
+  margin: auto;
+}
+
+/* 겹침방지 - 높이 100px고정 */
+@media (max-width: 800px) {
+  .mw {
+    padding-top: 100px;
+  }
+}
+
+.foot {
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid lightgray;
+}
+
+h2 {
+  font-size: 2rem !important;
+  padding: 1rem 0 !important;
+}
+
+/* main 카테고리 리스트 */
+.mainlist {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.mainlist > * {
+  /* border: 1px solid red; */
+  padding: 0;
+}
+
+.mainlist .listCon {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* auto-fill, auto-fit 가능 */
+  gap: 1rem;
+}
+
+.listCon li {
+  /* border: 5px solid lightblue; */
+  padding: 0;
+}
+
+.shopall {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.shopall h2 {
+  width: 100%;
+}
+
+.shopall nav {
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.shopall nav button {
+  background-color: orange;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 10px;
+  color: white;
+}
+
+.shopall .listCon {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.cart th {
+  text-align: center;
+}
+
+.cart th,
+.cart td {
+  padding: 1rem;
+  border: 1px solid lightgray;
+  vertical-align: middle;
+}
+
+.cart .center {
+  text-align: center;
+}
+
+.cart .right {
+  text-align: right;
+}
+
+.cart img {
+  width: 100px;
+}
+
+.cart tbody td:nth-of-type(2) {
+  cursor: pointer;
+}
+
+.cart tbody td:last-of-type {
+  cursor: pointer;
+}
+.cart tbody td:last-of-type:hover i {
+  color: orange;
+}
